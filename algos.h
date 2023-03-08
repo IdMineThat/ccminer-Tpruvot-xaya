@@ -39,7 +39,7 @@ enum sha_algos {
 	ALGO_MJOLLNIR,		/* Hefty hash */
 	ALGO_MYR_GR,
 	ALGO_NEOSCRYPT,
-	ALGO_XAYA
+	ALGO_XAYA,
 	ALGO_NIST5,
 	ALGO_PENTABLAKE,
 	ALGO_PHI,
@@ -122,7 +122,7 @@ static const char *algo_names[] = {
 	"mjollnir",
 	"myr-gr",
 	"neoscrypt",
-	"xaya"
+	"xaya",
 	"nist5",
 	"penta",
 	"phi",
@@ -219,7 +219,7 @@ static inline int algo_to_int(char* arg)
 			i = ALGO_WHIRLPOOL;
 		else if (!strcasecmp("ziftr", arg))
 			i = ALGO_ZR5;
-		else if ((!strcasecmp("neoscrypt-xaya", arg))
+		else if (!strcasecmp("neoscrypt-xaya", arg))
 			i = ALGO_XAYA;
 		else
 			i = -1;
