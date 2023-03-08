@@ -154,6 +154,7 @@ bool bench_algo_switch_next(int thr_id)
 		if (algo == ALGO_GROESTL) algo++;
 		if (algo == ALGO_MYR_GR) algo++;
 		if (algo == ALGO_NEOSCRYPT) algo++;
+		if (algo == ALGO_XAYA) algo++;
 		if (algo == ALGO_WHIRLPOOLX) algo++;
 	}
 	// and unwanted ones...
