@@ -279,6 +279,7 @@ extern int scanhash_blake256(int thr_id, struct work* work, uint32_t max_nonce, 
 extern int scanhash_blake2b(int thr_id, struct work *work, uint32_t max_nonce, unsigned long *hashes_done);
 extern int scanhash_blake2s(int thr_id, struct work *work, uint32_t max_nonce, unsigned long *hashes_done);
 extern int scanhash_bmw(int thr_id, struct work* work, uint32_t max_nonce, unsigned long *hashes_done);
+extern int scanhash_bmw512(int thr_id, struct work* work, uint32_t max_nonce, unsigned long *hashes_done);
 extern int scanhash_c11(int thr_id, struct work* work, uint32_t max_nonce, unsigned long *hashes_done);
 extern int scanhash_cryptolight(int thr_id, struct work* work, uint32_t max_nonce, unsigned long *hashes_done, int variant);
 extern int scanhash_cryptonight(int thr_id, struct work* work, uint32_t max_nonce, unsigned long *hashes_done, int variant);
@@ -353,6 +354,7 @@ extern void free_blake256(int thr_id);
 extern void free_blake2b(int thr_id);
 extern void free_blake2s(int thr_id);
 extern void free_bmw(int thr_id);
+extern void free_bmw512(int thr_id);
 extern void free_c11(int thr_id);
 extern void free_cryptolight(int thr_id);
 extern void free_cryptonight(int thr_id);
