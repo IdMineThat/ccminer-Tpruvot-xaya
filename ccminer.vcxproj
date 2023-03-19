@@ -405,6 +405,7 @@
   </ItemGroup>
   <ItemGroup>
     <CudaCompile Include="cuda.cpp" />
+    <CudaCompile Include="bmw512.cu" />
     <CudaCompile Include="cuda_groestlcoin.cu" />
     <CudaCompile Include="cuda_myriadgroestl.cu" />
     <CudaCompile Include="scrypt\blake.cu" />
