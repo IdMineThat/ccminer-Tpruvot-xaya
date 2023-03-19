@@ -247,6 +247,7 @@ Options:\n\
 			blake2s     Blake2-S 256 (NEVA)\n\
 			blakecoin   Fast Blake 256 (8 rounds)\n\
 			bmw         BMW 256\n\
+			bmw 512     BMW 512\N\
 			cryptolight AEON cryptonight (MEM/2)\n\
 			cryptonight XMR cryptonight v1 (old)\n\
 			c11/flax    X11 variant\n\
@@ -840,7 +841,7 @@ static bool work_decode(const json_t *val, struct work *work)
 }
 
 #define YES "yes!"
-#define YAY "yay!!!"
+#define YAY "YouMinedThat"
 #define BOO "booooo"
 
 int share_result(int result, int pooln, double sharediff, const char *reason)
@@ -1764,6 +1765,9 @@ static bool stratum_gen_work(struct stratum_ctx *sctx, struct work *work)
 		case ALGO_X16S:
 			work_set_target(work, sctx->job.diff / (256.0 * opt_difficulty));
 			break;
+		case ALGO_BMW512:
+			work_set_target(work, sctx->job.diff / (256.0 * opt_difficulty));
+			break;
 		case ALGO_KECCAK:
 		case ALGO_LYRA2:
 			work_set_target(work, sctx->job.diff / (128.0 * opt_difficulty));
@@ -2270,6 +2274,7 @@ static void *miner_thread(void *userdata)
 				break;
 			case ALGO_BLAKE:
 			case ALGO_BMW:
+				case ALFO_BMW512:
 			case ALGO_DECRED:
 			case ALGO_SHA256D:
 			case ALGO_SHA256T:
@@ -2404,6 +2409,9 @@ static void *miner_thread(void *userdata)
 		case ALGO_BMW:
 			rc = scanhash_bmw(thr_id, &work, max_nonce, &hashes_done);
 			break;
+		case ALGO_BMW512:
+			rc = scanhash_bmw512(thr_id, &work, max_nonce, &hashes_done);
+			break;	
 		case ALGO_C11:
 			rc = scanhash_c11(thr_id, &work, max_nonce, &hashes_done);
 			break;
