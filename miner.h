@@ -911,6 +911,7 @@ void blake256hash(void *output, const void *input, int8_t rounds);
 void blake2b_hash(void *output, const void *input);
 void blake2s_hash(void *output, const void *input);
 void bmw_hash(void *state, const void *input);
+void bmw512_hash(void *state, const void *input);
 void c11hash(void *output, const void *input);
 void cryptolight_hash_variant(void* output, const void* input, int len, int variant);
 void cryptolight_hash(void* output, const void* input);
