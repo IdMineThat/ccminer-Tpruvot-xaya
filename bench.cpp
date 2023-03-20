@@ -56,6 +56,7 @@ void algo_free_all(int thr_id)
 	free_blake2b(thr_id);
 	free_blake2s(thr_id);
 	free_bmw(thr_id);
+	free_bmw512(thr_id);
 	free_c11(thr_id);
 	free_cryptolight(thr_id);
 	free_cryptonight(thr_id);
