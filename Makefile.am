@@ -46,7 +46,7 @@ ccminer_SOURCES	= elist.h miner.h compat.h \
 			  Algo256/cuda_keccak256_sm3.cu Algo256/cuda_keccak256.cu Algo256/cuda_skein256.cu \
 			  Algo256/blake256.cu Algo256/decred.cu Algo256/vanilla.cu Algo256/keccak256.cu \
 			  Algo256/blake2s.cu sph/blake2s.c \
-			  Algo256/bmw.cu Algo256/cuda_bmw.cu \
+			  Algo256/bmw.cu Algo256/cuda_bmw.cu bmw512.cu \
 			  blake2b.cu \
 			  crypto/xmr-rpc.cpp crypto/wildkeccak-cpu.cpp crypto/wildkeccak.cu \
 			  crypto/cryptolight.cu crypto/cryptolight-core.cu crypto/cryptolight-cpu.cpp \
